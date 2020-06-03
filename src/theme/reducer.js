@@ -4,14 +4,14 @@ import { SET_DEVICE_THEME } from "./constants"
 import { lightTheme, darkTheme } from "./themes"
 
 export const initialThemeState = {
-  currentTheme: { ...lightTheme },
+  currentTheme: lightTheme,
 }
 
 export const themeReducer = handleActions(
   {
-    [SET_DEVICE_THEME]: (state, { nextTheme }) => ({
+    [SET_DEVICE_THEME]: state => ({
       ...state,
-      currentTheme: nextTheme === "lightTheme" ? lightTheme : darkTheme,
+      currentTheme: state.currentTheme === lightTheme ? darkTheme : lightTheme, // set the theme to the opisite of what is currently is
     }),
   },
   initialThemeState
