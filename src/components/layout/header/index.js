@@ -1,7 +1,14 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { StyledNav, StyledNavContainer } from "../../styled-components/navbar"
+import {
+  StyledNav,
+  StyledNavContainer,
+  StyledNavBranding,
+  StyledNavList,
+  StyledNavListItem,
+  StyledNavLink,
+} from "../../styled-components/navbar"
 
 const query = graphql`
   {
@@ -25,11 +32,29 @@ const Header = props => {
   return (
     <StaticQuery
       query={query}
-      render={data => (
-        <StyledNav>
-          <StyledNavContainer>test</StyledNavContainer>
-        </StyledNav>
-      )}
+      render={data => {
+        console.log(data.prismic.allNavigations.edges[0].node.navigation_links)
+        return (
+          <StyledNav>
+            <StyledNavContainer>
+              <StyledNavBranding>
+                {data.prismic.allNavigations.edges[0].node.branding}
+              </StyledNavBranding>
+              <StyledNavList>
+                {data.prismic.allNavigations.edges[0].node.navigation_links.map(
+                  navigation_link => (
+                    <StyledNavListItem>
+                      <StyledNavLink to={navigation_link.navigation_link}>
+                        {navigation_link.navigation_label}
+                      </StyledNavLink>
+                    </StyledNavListItem>
+                  )
+                )}
+              </StyledNavList>
+            </StyledNavContainer>
+          </StyledNav>
+        )
+      }}
     />
   )
 }
