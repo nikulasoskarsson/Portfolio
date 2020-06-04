@@ -9,6 +9,8 @@ import {
   StyledNavListItem,
   StyledNavLink,
 } from "../../styled-components/navbar"
+import { useDispatch } from "react-redux"
+import { setTheme } from "../../../theme/actions"
 
 const query = graphql`
   {
@@ -29,6 +31,7 @@ const query = graphql`
 `
 
 const Header = props => {
+  const dispatch = useDispatch()
   return (
     <StaticQuery
       query={query}
@@ -50,6 +53,7 @@ const Header = props => {
                     </StyledNavListItem>
                   )
                 )}
+                <button onClick={() => dispatch(setTheme())}>theme</button>
               </StyledNavList>
             </StyledNavContainer>
           </StyledNav>

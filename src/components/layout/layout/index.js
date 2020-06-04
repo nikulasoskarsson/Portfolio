@@ -7,6 +7,7 @@ import "../../layout.css"
 import { ThemeProvider } from "styled-components"
 
 import { useTheme } from "../../../hooks"
+import StyledLayout from "../../styled-components/StyledLayout"
 
 const Layout = ({ children }) => {
   const theme = useTheme()
@@ -23,11 +24,11 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header />
+      <StyledLayout>
+        <Header />
 
-      {children}
-
-      <button onClick={() => {}}>change theme</button>
+        {children}
+      </StyledLayout>
     </ThemeProvider>
   )
 }
