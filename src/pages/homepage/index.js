@@ -1,11 +1,13 @@
 import React from "react"
 import Layout from "../../components/layout/layout"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
-import styled from "styled-components"
 import { StyledCenteredDiv } from "../../components/styled-components/layout"
 import { StyledHeadingPrimary } from "../../components/styled-components/typography"
 import { StyledButtonPrimary } from "../../components/styled-components/buttons"
+
+import { ButtonVariants } from "../../variants"
+import { motion } from "framer-motion"
 
 export const query = graphql`
   {
@@ -37,9 +39,15 @@ const index = ({ data }) => {
         <StyledHeadingPrimary>
           {call_to_action_title[0].text}
         </StyledHeadingPrimary>
-        <StyledButtonPrimary to={button_destination}>
-          {button_label}
-        </StyledButtonPrimary>
+        <div style={{ paddingTop: 40 }}>
+          <StyledButtonPrimary
+            to={button_destination}
+            variants={ButtonVariants}
+            whileHover="hover"
+          >
+            {button_label}
+          </StyledButtonPrimary>
+        </div>
       </StyledCenteredDiv>
     </Layout>
   )
