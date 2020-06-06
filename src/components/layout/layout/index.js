@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "../header"
 import "../../layout.css"
+import { PageVariants } from "../../../variants"
 
 import { ThemeProvider } from "styled-components"
 
@@ -24,7 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <StyledLayout>
+      <StyledLayout variants={PageVariants} initial="initial" animate="animate">
         <Header />
 
         {children}

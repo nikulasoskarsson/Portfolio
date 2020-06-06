@@ -36,11 +36,10 @@ const Header = props => {
     <StaticQuery
       query={query}
       render={data => {
-        console.log(data.prismic.allNavigations.edges[0].node.navigation_links)
         return (
           <StyledNav>
             <StyledNavContainer>
-              <StyledNavBranding>
+              <StyledNavBranding to="/homepage">
                 {data.prismic.allNavigations.edges[0].node.branding}
               </StyledNavBranding>
               <StyledNavList>

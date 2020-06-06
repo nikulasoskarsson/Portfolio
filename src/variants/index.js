@@ -1,3 +1,4 @@
 import ButtonVariants from "./ButtonVariants"
+import PageVariants from "./PageVariants"
 
-export { ButtonVariants }
+export { ButtonVariants, PageVariants }
