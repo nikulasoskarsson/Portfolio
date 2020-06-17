@@ -6,5 +6,6 @@ export default styled.div`
   border-radius: 50%;
   background-color: ${({ theme }) => theme.textPrimary};
   position: absolute;
-  left: -5px;
+  left: -65.5px;
+  top: 26px;
 `
