@@ -15,6 +15,14 @@ export const query = graphql`
               job_description
               job_title
             }
+            education_title
+            work_experience_title
+            education {
+              education_date
+              program_description
+              program_name
+              school_name
+            }
           }
         }
       }
@@ -22,11 +30,12 @@ export const query = graphql`
   }
 `
 const index = ({ data }) => {
-  const { work_experience } = data.prismic.allCv_pages.edges[0].node
+  const { work_experience, education } = data.prismic.allCv_pages.edges[0].node
   console.log("data from cv", work_experience)
   return (
     <Layout>
       <CvSection title="Work experience" list={work_experience} />
+      <CvSection title="Education" list={education} />
     </Layout>
   )
 }
