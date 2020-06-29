@@ -1,9 +1,17 @@
 import React, { useState } from "react"
-import { StyledDropdown } from "../styled"
+import { StyledDropdown, StyledDropdownHeader } from "../styled"
+import DropdownItem from "./dropdownitem"
 
-const dropdown = () => {
+const Dropdown = () => {
   const placementFilters = ["Design", "Frontend", "Backend", "Mobile"]
-  return <StyledDropdown></StyledDropdown>
+  return (
+    <StyledDropdown>
+      <StyledDropdownHeader>Project type</StyledDropdownHeader>
+      {placementFilters.map(filter => (
+        <DropdownItem filter={filter} />
+      ))}
+    </StyledDropdown>
+  )
 }
 
-export default dropdown
+export default Dropdown
