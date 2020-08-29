@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../../components/layout/layout"
 import { graphql } from "gatsby"
-import Dropdown from "./components/filters/dropdown/dropdown"
+import PortfolioList from "./portfolio/portfoliolist"
 
 export const query = graphql`
   {
@@ -39,15 +39,11 @@ export const query = graphql`
 `
 
 const index = ({ data }) => {
-  console.log(
-    "portoflio data",
-    data.prismic.allPortfoliopages.edges[0].node.body[0].fields
-  )
   return (
     <Layout>
-      <div style={{ padding: 60 }}>
-        <Dropdown />
-      </div>
+      <PortfolioList
+        data={data.prismic.allPortfoliopages.edges[0].node.body[0].fields}
+      />
     </Layout>
   )
 }

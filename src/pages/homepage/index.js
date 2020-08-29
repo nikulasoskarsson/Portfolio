@@ -7,7 +7,6 @@ import { StyledHeadingPrimary } from "../../components/styled-components/typogra
 import { StyledButtonPrimary } from "../../components/styled-components/buttons"
 
 import { ButtonVariants } from "../../variants"
-import { motion } from "framer-motion"
 
 export const query = graphql`
   {

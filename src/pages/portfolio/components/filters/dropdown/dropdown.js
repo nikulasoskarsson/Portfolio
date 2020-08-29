@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { StyledDropdown, StyledDropdownHeader } from "../styled"
+import React from "react"
+import { StyledDropdown, StyledDropdownHeader } from "../../styled"
 import DropdownItem from "./dropdownitem"
 
 const Dropdown = () => {
