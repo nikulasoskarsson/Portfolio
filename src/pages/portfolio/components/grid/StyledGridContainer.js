@@ -5,6 +5,6 @@ export default styled.div`
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
 
-  grid-gap: 0.3rem;
+  grid-gap: 3rem;
   padding-top: 4rem;
 `
