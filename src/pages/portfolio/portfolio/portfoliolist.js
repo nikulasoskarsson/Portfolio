@@ -1,13 +1,14 @@
 import React from "react"
 import PortfolioItem from "./portfolioitem"
+import { StyledGridContainer } from "../components/grid"
 
 const PortfolioList = ({ data }) => {
   return (
-    <div style={{ width: "90%", margin: "0 auto" }}>
+    <StyledGridContainer>
       {data.map(item => (
         <PortfolioItem item={item} />
       ))}
-    </div>
+    </StyledGridContainer>
   )
 }
 

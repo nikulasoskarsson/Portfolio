@@ -12,10 +12,13 @@ import {
 const PortfolioItem = ({ item }) => {
   console.log(item)
   return (
-    <div style={{ width: "30%" }}>
-      <StyledMediumText>{item.title[0].text}</StyledMediumText>
-      <StyledLightText>Design & programming</StyledLightText>
-      <div style={{ position: "relative", borderRadius: "5px" }}>
+    <div>
+      <div
+        style={{
+          position: "relative",
+          borderRadius: "5px",
+        }}
+      >
         <div
           style={{
             backgroundColor: "#444444",
@@ -29,22 +32,33 @@ const PortfolioItem = ({ item }) => {
           }}
         />
         <img
-          style={{ height: "100%", width: "100%", zIndex: 4 }}
+          style={{
+            height: "100%",
+            width: "100%",
+            zIndex: 4,
+          }}
           src={item.image.url}
           alt={item.image.alt}
         />
       </div>
+      <StyledMediumText>{item.title[0].text}</StyledMediumText>
+      <StyledLightText style={{ marginBottom: "0.5rem" }}>
+        Design & programming
+      </StyledLightText>
       <StyledLightText>{item.description}</StyledLightText>
-      <div>
+      <div style={{ marginTop: "3rem", marginBottom: "2.5rem" }}>
         {item.stack.map(stackItem => (
           <StyledTag>{stackItem.text}</StyledTag>
         ))}
       </div>
-      <div>
-        <StyledButtonSecondaryMd href={item.site_link.url} className="">
+      <div style={{ display: "flex" }}>
+        <StyledButtonSecondaryMd
+          style={{ marginRight: "2rem" }}
+          href={item.site_link.url}
+        >
           Go to site
         </StyledButtonSecondaryMd>
-        <StyledButtonPrimaryMd href={item.github_link.url} className="">
+        <StyledButtonPrimaryMd href={item.github_link.url}>
           Github
         </StyledButtonPrimaryMd>
       </div>
