@@ -3,7 +3,7 @@ import StyledNavContainer from "./StyledNavContainer"
 import StyledNavBranding from "./StyledNavBranding"
 import StyledNavList from "./StyledNavList"
 import StyledNavListItem from "./StyledNavListItem"
-import StyledNavLink from "./styledNavLink"
+import StyledNavLink from "./StyledNavLink"
 
 export {
   StyledNav,
