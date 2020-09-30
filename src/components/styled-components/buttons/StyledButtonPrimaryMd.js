@@ -12,7 +12,7 @@ export default styled(motion.a)`
   border-color: ${({ theme }) => theme.textPrimary};
   box-shadow: ${({ theme }) => `0 0.5rem 2rem rgba(0, 0, 0, 0.25)`};
   cursor: pointer;
-  display: grid;
+  display: flex;
 
   height: 4rem;
   width: 10.3rem;
