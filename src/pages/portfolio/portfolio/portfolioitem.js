@@ -1,5 +1,5 @@
 import React from "react"
-import { StyledTag } from "../components/styled"
+import { StyledTag } from "../../../components/styled-components/misc"
 import {
   StyledButtonPrimaryMd,
   StyledButtonSecondaryMd,
