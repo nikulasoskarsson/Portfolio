@@ -1,5 +1,8 @@
 import React from "react"
-import { StyledDropdown, StyledDropdownHeader } from "../../styled"
+import {
+  StyledDropdown,
+  StyledDropdownHeader,
+} from "../../../../../components/styled-components/misc"
 import DropdownItem from "./dropdownitem"
 
 const Dropdown = () => {
