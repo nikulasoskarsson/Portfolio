@@ -27,8 +27,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <StyledLayout variants={PageVariants} initial="initial" animate="animate">
         <Header />
-
-        {children}
+        <div style={{ width: "90%", margin: "0 auto" }}>{children}</div>
       </StyledLayout>
     </ThemeProvider>
   )
