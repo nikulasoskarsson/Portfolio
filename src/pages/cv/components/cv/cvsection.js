@@ -8,8 +8,8 @@ const CvSection = ({ title, list }) => {
     <div style={{ margin: 80 }}>
       <StyledUnderlineHeading>{title}</StyledUnderlineHeading>
       <StyledCvContainer>
-        {list.map(item => (
-          <CvItem item={item} />
+        {list.map((item, index) => (
+          <CvItem key={index} item={item} />
         ))}
       </StyledCvContainer>
     </div>

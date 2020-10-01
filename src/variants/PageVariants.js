@@ -1,10 +1,9 @@
 export default {
   initial: {
-    scale: 0,
+    opacity: 0,
   },
-  animate: { scale: 1 },
+  animate: { opacity: 1 },
   transition: {
-    delay: 5.5,
-    ease: "easeInOut",
+    duration: 20000,
   },
 }

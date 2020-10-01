@@ -44,8 +44,8 @@ const Header = props => {
               </StyledNavBranding>
               <StyledNavList>
                 {data.prismic.allNavigations.edges[0].node.navigation_links.map(
-                  navigation_link => (
-                    <StyledNavListItem>
+                  (navigation_link, index) => (
+                    <StyledNavListItem key={index}>
                       <StyledNavLink to={navigation_link.navigation_link}>
                         {navigation_link.navigation_label}
                       </StyledNavLink>
