@@ -1,0 +1,25 @@
+{
+  "Main": {
+    "call_to_action_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Call to action title",
+        "placeholder": "Call to action title"
+      }
+    },
+    "button_label": {
+      "type": "Text",
+      "config": {
+        "label": "Button Label"
+      }
+    },
+    "button_destination": {
+      "type": "Text",
+      "config": {
+        "label": "Button Destination",
+        "placeholder": "Button Destination"
+      }
+    }
+  }
+}

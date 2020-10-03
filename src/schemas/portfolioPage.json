@@ -1,0 +1,92 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "slug",
+        "placeholder": "slug"
+      }
+    },
+    "placeholder_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Placeholder title",
+        "placeholder": "Placeholder title"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "nikulas_oskarsson": [],
+          "portfolio_section": []
+        },
+        "choices": {
+          "portfolio_section": {
+            "type": "Slice",
+            "fieldset": "Portfolio",
+            "description": "Portfolio Section",
+            "icon": "apps",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Image"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Title"
+                }
+              },
+              "project_type": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "list-item",
+                  "label": "Project Type",
+                  "placeholder": "Project Type"
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut vulputate neque, ac molestie sapien. In magna ante, pulvinar dignissim turpis in, porttitor gravida purus. Nullam libero lectus, volutpat vel suscipit eget, pellentesque et urna. Phasellus sollicitudin ante mi, non blandit erat interdum in. Aenean et elit eget libero ultricies finibus eget vitae sapien."
+                }
+              },
+              "stack": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "list-item",
+                  "label": "Stack"
+                }
+              },
+              "github_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Github Link",
+                  "placeholder": "Github"
+                }
+              },
+              "site_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Site Link",
+                  "placeholder": "Go to site"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

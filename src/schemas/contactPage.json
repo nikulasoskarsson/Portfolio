@@ -1,0 +1,49 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug",
+        "placeholder": "slug"
+      }
+    },
+    "form_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "Form title",
+        "placeholder": "Form title"
+      }
+    },
+    "form_fields": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "form_label": {
+            "type": "Text",
+            "config": {
+              "label": "Form label",
+              "placeholder": "Form label"
+            }
+          },
+          "form_placeholder": {
+            "type": "Text",
+            "config": {
+              "label": "Form Placeholder",
+              "placeholder": "Form Placeholder"
+            }
+          },
+          "form_type": {
+            "type": "Select",
+            "config": {
+              "options": ["text", "email", "textarea"],
+              "label": "Form Type",
+              "placeholder": "Form Type"
+            }
+          }
+        },
+        "label": "Form Fields"
+      }
+    }
+  }
+}
