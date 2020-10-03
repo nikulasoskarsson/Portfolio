@@ -10,13 +10,15 @@ import { ButtonVariants } from "../../variants"
 
 export const query = graphql`
   {
-    prismic {
-      allHomepages {
-        edges {
-          node {
-            call_to_action_title
+    allPrismicHomepage {
+      edges {
+        node {
+          data {
             button_destination
             button_label
+            call_to_action_title {
+              text
+            }
           }
         }
       }

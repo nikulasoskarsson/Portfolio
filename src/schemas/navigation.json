@@ -1,0 +1,33 @@
+{
+  "Main": {
+    "branding": {
+      "type": "Text",
+      "config": {
+        "label": "Branding",
+        "placeholder": "Branding"
+      }
+    },
+    "navigation_links": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "navigation_label": {
+            "type": "Text",
+            "config": {
+              "label": "Navigation Label",
+              "placeholder": "Navigation Label"
+            }
+          },
+          "navigation_link": {
+            "type": "Text",
+            "config": {
+              "label": "Navigation Link",
+              "placeholder": "Navigation Link"
+            }
+          }
+        },
+        "label": "navigation links"
+      }
+    }
+  }
+}

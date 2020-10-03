@@ -15,11 +15,19 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-prismic-graphql",
+      resolve: "gatsby-source-prismic",
       options: {
         repositoryName: "nikulasoskarssondotcom",
+        schemas: {
+          contact: require("./src/schemas/contactPage.json"),
+          cv: require("./src/schemas/cvPage.json"),
+          homepage: require("./src/schemas/homePage.json"),
+          navigation: require("./src/schemas/navigation.json"),
+          portfolio: require("./src/schemas/portfolioPage.json"),
+        },
       },
     },
+
     `gatsby-plugin-react-helmet`,
 
     {
